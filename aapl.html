@@ -1,0 +1,72 @@
+<h1 style="text-align: center;">APPL - project01</h1>
+<p>&nbsp;</p>
+<blockquote>
+<p style="text-align: center;"><strong>About:&nbsp;</strong>This project is an overview of Apple's stock data over the last 10 years. We will examine:</p>
+<ul style="text-align: center;">
+<li>Introduction</li>
+<li>Filtering of data</li>
+<li>Data Visualisation&nbsp;</li>
+<li>Further comments</li>
+<li>Conclusion</li>
+</ul>
+<p style="text-align: center;"><em>Credits:</em>&nbsp;stock data was sourced from<em>&nbsp;<a href="https://www.kaggle.com/tarunpaparaju/apple-aapl-historical-stock-data">https://www.kaggle.com/tarunpaparaju/apple-aapl-historical-stock-data</a>&nbsp;</em>&nbsp;</p>
+</blockquote>
+<p style="text-align: center;">&nbsp;</p>
+<h3 style="text-align: center;"><strong>Introduction</strong></h3>
+<p style="text-align: left;">Apple is a technology company headquarted in Cupertino, California that manufactures and sells electronics, computer software and online services. Some of Apple's most renown products include the iPhone, iPad and Macbook. Apple's first IPO - Initial Public Offering was on December 12, 1980. Now in 2020, we shall examine the stock data of Apple.</p>
+<p style="text-align: left;">We will use MySQL, RStudio and C for this project.</p>
+<p style="text-align: left;">The dataset</p>
+<ul style="list-style-type: disc;">
+<li style="text-align: center;">Date</li>
+<li style="text-align: center;">Closing price</li>
+<li style="text-align: center;">Stock volume on the date</li>
+<li style="text-align: center;">Market open price</li>
+<li style="text-align: center;">High of the day</li>
+<li style="text-align: center;">Low of the day&nbsp;</li>
+</ul>
+<p style="text-align: center;">&nbsp;</p>
+<h3 style="text-align: center;">Filtering of data</h3>
+<p style="text-align: center;">Now using MySQL we will import data into "project" schema and will rename the table to AAPL.&nbsp;</p>
+<p style="text-align: left;">Next we shall start to filter through the data.</p>
+<p><span style="text-decoration: underline;">Viewing AAPL dataset</span>,&nbsp;</p>
+<p style="text-align: center;"><span style="color: #00ff00;">&nbsp;SELECT * FROM AAPL;<br /></span></p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://i.imgur.com/6WJ0u81.png" alt="viewing the entire dataset" width="1155" height="440" /></p>
+<p style="text-align: left;">&nbsp;We now have seen the entire dataset. The results have been returned in a table.</p>
+<p style="text-align: left;">&nbsp;</p>
+<p style="text-align: left;"><span style="text-decoration: underline;">Summing data</span></p>
+<p style="text-align: center;"><span style="text-align: center; color: #00ff00;">SELECT SUM(Volume) FROM AAPL;</span></p>
+<p><span style="text-align: center;"><img style="display: block; margin-left: auto; margin-right: auto;" src="https://i.imgur.com/AFH1jrp.png" alt="sum of stock volume" width="564" height="320" /></span></p>
+<p style="text-align: left;">We have summed every AAPL stock on the market ~ 182,756,677,352 shares!</p>
+<p style="text-align: left;">&nbsp;</p>
+<p style="text-align: left;"><span style="text-decoration: underline;">Finding the number of results of a specific case</span></p>
+<p style="text-align: center;"><span style="text-align: center; color: #00ff00;">SELECT COUNT(*) AS thecount FROM AAPL WHERE Volume &gt; 200000000;</span></p>
+<p style="text-align: center;"><span style="text-align: center;"><img src="https://i.imgur.com/xVEsoRv.png" alt="number of results where volume is bigger than 200 million" width="509" height="263" /></span></p>
+<p style="text-align: left;">We can now see the number of results in our dataset named as "the count" where the volume on the day was greater than 200,000,000.</p>
+<p style="text-align: left;">&nbsp;</p>
+<p style="text-align: left;">From using MySQL, we can filter out certain sets of data to our liking...</p>
+<p style="text-align: left;">&nbsp;</p>
+<h3 style="text-align: center;"><strong>Data Visualisation</strong></h3>
+<p style="text-align: center;">Now we shall import the same dataset into RStudio. Some changes were made to the dataset to make it more R friendly.</p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: left;">We ran a number of graphs and plots in R.</p>
+<p style="text-align: left;"><span style="text-decoration: underline;">The R code</span></p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://i.imgur.com/5EGccMZ.png" alt="R code" width="770" height="924" />&nbsp;</p>
+<p style="text-align: left;"><span style="text-decoration: underline;">The Visualisations</span></p>
+<p style="text-align: left;"><em>Variables were Year (changed from original dataset ~ Date) and Volume.</em></p>
+<p style="text-align: center;"><img src="https://i.imgur.com/TiZqkgF.png" alt="" width="543" height="377" /></p>
+<p style="text-align: center;"><img src="https://i.imgur.com/vXjOv1h.png" alt="" width="522" height="358" /></p>
+<p style="text-align: center;"><img src="https://i.imgur.com/2dgoX9X.png" alt="" width="546" height="364" /></p>
+<p style="text-align: center;"><img src="https://i.imgur.com/LbVzfxc.png" alt="" width="545" height="373" /></p>
+<p style="text-align: center;"><img src="https://i.imgur.com/Ra0E8zN.png" alt="" width="537" height="334" /></p>
+<p style="text-align: center;">&nbsp;</p>
+<h3 style="text-align: center;"><strong>Further Comments</strong></h3>
+<p style="text-align: center;">We also ran some code in C to illustrate a hypothetical situation of an investor in 2010 and his/her's situation in 2020.</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="https://i.imgur.com/QvqVuTS.png" alt="" width="596" height="672" /></p>
+<p style="text-align: center;">Profit of $7,870,840</p>
+<p style="text-align: center;"><span style="text-align: center; color: #00ff00;"><span style="text-align: center;">Portfolio change: 887.084% (^)</span></span></p>
+<p style="text-align: center;">&nbsp;</p>
+<h3 style="text-align: center;"><strong><span style="text-align: center;"><span style="text-align: center;">Conclusion</span></span></strong></h3>
+<p style="text-align: center;"><span style="text-align: center;"><span style="text-align: center;">This includes AAPL - Project 01 *test*. A variety of plots were generated to illustrate the stock data of Apple from 2010 - 2020. These plots were generated using R. A range of stock data was filtered using SQL and finally some mathematical calculations were done in C. In conclusion, Apple is a very successful company and a very worthy investment.</span></span></p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;">&nbsp;</p>
